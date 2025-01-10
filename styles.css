@@ -1,0 +1,51 @@
+/* styles.css */
+
+/* Loader Spinner */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #f59e0b; /* Tailwind's yellow-500 */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Custom Colors */
+:root {
+  --brand-gold: #f59e0b; /* Tailwind's yellow-500 */
+  --brand-black: #1f2937; /* Tailwind's gray-800 */
+}
+
+.text-brandGold {
+  color: var(--brand-gold);
+}
+
+.bg-brandGold {
+  background-color: var(--brand-gold);
+}
+
+.text-brandBlack {
+  color: var(--brand-black);
+}
+
+.border-brandGold {
+  border-color: var(--brand-gold);
+}
+
+.focus\:border-brandGold:focus {
+  border-color: var(--brand-gold);
+}
+
+/* Modal Enhancements */
+#buyNowModal .rounded-2xl {
+  border-radius: 1.5rem; /* 24px */
+}
+
+#buyNowModal .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}

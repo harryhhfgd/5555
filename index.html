@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prizma - Exquisite Gold & Diamond Jewelry</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body class="font-lato bg-gray-100">
+
+  <!-- Top Banner -->
+  <div class="bg-yellow-500 text-center py-2 text-white">
+    Exclusive Offer: Get 10% OFF on All Orders with Code: <strong>PRIZMA10</strong>
+  </div>
+
+  <!-- Header and Navigation -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-4 py-3">
+      <!-- Logo -->
+      <div class="text-2xl font-playfair text-brandGold">
+        Prizma
+      </div>
+      
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="#products" class="text-gray-700 hover:text-brandGold">Products</a>
+        <a href="#collections" class="text-gray-700 hover:text-brandGold">Collections</a>
+        <a href="#about" class="text-gray-700 hover:text-brandGold">About Us</a>
+        <a href="#contact" class="text-gray-700 hover:text-brandGold">Contact</a>
+      </nav>
+      
+      <!-- Search and Icons -->
+      <div class="flex items-center space-x-4">
+        <input type="text" placeholder="Search..." class="hidden md:block border border-gray-300 rounded px-2 py-1 focus:outline-none focus:border-brandGold">
+        <button aria-label="Wishlist" class="relative wishlist-btn">
+          <i class="fas fa-heart text-gray-700 hover:text-red-500"></i>
+          <span class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+        </button>
+        <button aria-label="Cart" class="relative cart-btn">
+          <i class="fas fa-shopping-cart text-gray-700 hover:text-brandGold"></i>
+          <span class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+        </button>
+        <!-- Hamburger Menu -->
+        <button class="md:hidden" id="menu-btn" aria-label="Menu">
+          <i class="fas fa-bars text-gray-700 hover:text-brandGold"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <nav class="md:hidden hidden bg-white shadow">
+      <a href="#products" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Products</a>
+      <a href="#collections" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Collections</a>
+      <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
+      <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-screen" style="background-image: url('images/hero-bg.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto h-full flex flex-col justify-center items-center text-center text-white px-4">
+      <h1 class="text-4xl md:text-6xl font-playfair mb-4">Discover Timeless Elegance</h1>
+      <p class="text-lg md:text-2xl mb-6">Exquisite Gold & Diamond Jewelry Crafted for You</p>
+      <a href="#products" class="bg-brandGold hover:bg-yellow-500 text-brandBlack font-semibold py-3 px-6 rounded-full transition-colors">Explore Collection</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-playfair text-center mb-12">Our Products</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Example Product Card -->
+        <!-- Repeat this block for each product -->
+        <div class="relative bg-white p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+          <!-- Image Carousel -->
+          <div class="swiper-container product-carousel mb-4">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/ring1.jpg" alt="Elegant Gold Ring" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/ring1-side.jpg" alt="Elegant Gold Ring - Side View" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+              </div>
+              <!-- Add more images as needed -->
+            </div>
+            <!-- Swiper Pagination and Navigation -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          
+          <!-- Wishlist Button -->
+          <button class="absolute top-4 right-4 text-gray-700 hover:text-red-500" onclick="toggleWishlist(this)" aria-label="Add to Wishlist">
+            <i class="fas fa-heart"></i>
+          </button>
+          
+          <!-- Product Details -->
+          <h3 class="text-xl font-semibold mb-2">Elegant Gold Ring</h3>
+          <div class="flex items-center mb-2">
+            <i class="fas fa-star text-yellow-400" aria-hidden="true"></i>
+            <i class="fas fa-star text-yellow-400" aria-hidden="true"></i>
+            <i class="fas fa-star text-yellow-400" aria-hidden="true"></i>
+            <i class="fas fa-star text-yellow-400" aria-hidden="true"></i>
+            <i class="fas fa-star-half-alt text-yellow-400" aria-hidden="true"></i>
+            <span class="ml-2 text-sm text-gray-600">120 Reviews</span>
+          </div>
+          <div class="text-sm line-through text-gray-400">Rs. 10,000.00</div>
+          <div class="text-2xl font-bold text-brandGold">Rs. 8,500.00</div>
+          
+          <!-- Buy Now Button -->
+          <button
+            class="mt-4 w-full bg-brandGold text-brandBlack font-semibold py-2 rounded-full hover:bg-yellow-500 transition-colors"
+            onclick="openOrderModal('Elegant Gold Ring','8500.00')"
+            aria-label="Buy Elegant Gold Ring Now"
+          >
+            Buy Now
+          </button>
+        </div>
+        <!-- Repeat Ends -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-playfair text-center mb-12">What Our Customers Say</h2>
+      
+      <div class="swiper-container testimonials-carousel">
+        <div class="swiper-wrapper">
+          <!-- Testimonial Slide -->
+          <div class="swiper-slide bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Aisha Khan" class="w-16 h-16 rounded-full mr-4">
+              <div>
+                <h3 class="text-lg font-semibold">Aisha Khan</h3>
+                <p class="text-sm text-gray-600">Mumbai, India</p>
+              </div>
+            </div>
+            <p class="mb-4">"Absolutely stunning pieces! The quality and craftsmanship are unmatched."</p>
+            <div class="flex">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star-half-alt text-yellow-400"></i>
+            </div>
+          </div>
+          <!-- Repeat for more testimonials -->
+          <div class="swiper-slide bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajiv Sharma" class="w-16 h-16 rounded-full mr-4">
+              <div>
+                <h3 class="text-lg font-semibold">Rajiv Sharma</h3>
+                <p class="text-sm text-gray-600">Delhi, India</p>
+              </div>
+            </div>
+            <p class="mb-4">"The customer service was exceptional and the jewelry exceeded my expectations."</p>
+            <div class="flex">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star-half-alt text-yellow-400"></i>
+            </div>
+          </div>
+          <!-- Add more testimonials as needed -->
+        </div>
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <!-- Image -->
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <img src="images/about-us.jpg" alt="About Prizma" class="w-full rounded-lg shadow-lg" loading="lazy">
+      </div>
+      
+      <!-- Text -->
+      <div class="md:w-1/2 md:pl-12">
+        <h2 class="text-3xl font-playfair mb-4">About Prizma</h2>
+        <p class="mb-4">At Prizma, we believe in crafting timeless pieces that embody elegance and sophistication. Our collection of gold and diamond jewelry is meticulously designed to cater to the discerning tastes of our esteemed customers.</p>
+        <p>With a legacy of exceptional craftsmanship and unwavering commitment to quality, Prizma stands as a beacon of luxury and style in the jewelry industry. We strive to create pieces that not only adorn but also tell a story of beauty and grace.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-playfair text-center mb-12">Get in Touch</h2>
+      
+      <div class="flex flex-col md:flex-row md:space-x-8">
+        <!-- Contact Information -->
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <h3 class="text-2xl font-semibold mb-4">Contact Information</h3>
+          <p class="mb-2"><strong>Address:</strong> 123 Prizma Street, Mumbai, India</p>
+          <p class="mb-2"><strong>Phone:</strong> +91 98765 43210</p>
+          <p class="mb-2"><strong>Email:</strong> support@prizma.com</p>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" aria-label="Facebook" class="text-gray-700 hover:text-brandGold"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" aria-label="Instagram" class="text-gray-700 hover:text-brandGold"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#" aria-label="Twitter" class="text-gray-700 hover:text-brandGold"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" aria-label="LinkedIn" class="text-gray-700 hover:text-brandGold"><i class="fab fa-linkedin fa-2x"></i></a>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-semibold mb-4">Send Us a Message</h3>
+          <form id="contactForm" class="space-y-4">
+            <div>
+              <label for="fullName" class="block text-gray-700 font-semibold">Full Name</label>
+              <input type="text" id="fullName" name="fullName" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700 font-semibold">Email Address</label>
+              <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+            </div>
+            <div>
+              <label for="subject" class="block text-gray-700 font-semibold">Subject</label>
+              <input type="text" id="subject" name="subject" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+            </div>
+            <div>
+              <label for="message" class="block text-gray-700 font-semibold">Message</label>
+              <textarea id="message" name="message" rows="4" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold"></textarea>
+            </div>
+            <button type="submit" class="bg-brandGold text-brandBlack font-semibold py-2 px-6 rounded-full hover:bg-yellow-500 transition-colors">Send Message</button>
+            <p id="formMessage" class="mt-4 text-green-500 hidden">Your message has been sent successfully!</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buy Now Modal -->
+  <div id="buyNowModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-2xl w-full max-w-lg p-6 relative shadow-lg transform transition-all duration-300 overflow-y-auto max-h-screen">
+      <button class="absolute top-4 right-4 text-gray-700 hover:text-gray-900" onclick="closeOrderModal()" aria-label="Close Modal">
+        <i class="fas fa-times fa-lg"></i>
+      </button>
+      <h2 id="modalTitle" class="text-2xl font-playfair mb-4 text-center">Purchase Product</h2>
+      <form id="purchaseForm" class="space-y-4">
+        <!-- Hidden Fields -->
+        <input type="hidden" id="productName" name="productName">
+        <input type="hidden" id="productPrice" name="productPrice">
+        
+        <!-- User Details -->
+        <div>
+          <label for="buyerName" class="block text-gray-700 font-semibold">Full Name</label>
+          <input type="text" id="buyerName" name="buyerName" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+        </div>
+        <div>
+          <label for="buyerEmail" class="block text-gray-700 font-semibold">Email Address</label>
+          <input type="email" id="buyerEmail" name="buyerEmail" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+        </div>
+        <div>
+          <label for="buyerAddress" class="block text-gray-700 font-semibold">Address</label>
+          <input type="text" id="buyerAddress" name="buyerAddress" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+        </div>
+        <div class="flex space-x-4">
+          <div class="w-1/2">
+            <label for="buyerPin" class="block text-gray-700 font-semibold">Pin Code</label>
+            <input type="text" id="buyerPin" name="buyerPin" required pattern="\d{6}" title="Enter a valid 6-digit Pin Code" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+          </div>
+          <div class="w-1/2">
+            <label for="buyerCity" class="block text-gray-700 font-semibold">City</label>
+            <input type="text" id="buyerCity" name="buyerCity" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+          </div>
+        </div>
+        <div>
+          <label for="buyerMobile" class="block text-gray-700 font-semibold">Mobile Number</label>
+          <input type="tel" id="buyerMobile" name="buyerMobile" required pattern="\d{10}" title="Enter a valid 10-digit mobile number" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+        </div>
+        
+        <!-- Size Selection (if applicable) -->
+        <div id="sizeSelection" class="hidden">
+          <label for="buyerSize" class="block text-gray-700 font-semibold">Size</label>
+          <select id="buyerSize" name="buyerSize" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+            <option value="">Select Size</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <!-- Add more sizes as needed -->
+          </select>
+        </div>
+        
+        <!-- Payment Options -->
+        <div>
+          <span class="block text-gray-700 font-semibold">Payment Method</span>
+          <div class="flex items-center mt-2">
+            <input type="radio" id="payCard" name="paymentMethod" value="card" required class="mr-2">
+            <label for="payCard" class="text-gray-700">Pay via Card</label>
+          </div>
+          <div class="flex items-center">
+            <input type="radio" id="payUPI" name="paymentMethod" value="upi" required class="mr-2">
+            <label for="payUPI" class="text-gray-700">Pay via UPI</label>
+          </div>
+        </div>
+        
+        <!-- Payment Details -->
+        <div id="cardDetails" class="hidden space-y-2">
+          <div>
+            <label for="cardNumber" class="block text-gray-700 font-semibold">Card Number</label>
+            <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" title="Enter a valid 16-digit card number" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+          </div>
+          <div class="flex space-x-4">
+            <div class="w-1/2">
+              <label for="cardExpiry" class="block text-gray-700 font-semibold">Expiry Date</label>
+              <input type="month" id="cardExpiry" name="cardExpiry" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+            </div>
+            <div class="w-1/2">
+              <label for="cardCVV" class="block text-gray-700 font-semibold">CVV</label>
+              <input type="text" id="cardCVV" name="cardCVV" pattern="\d{3}" title="Enter a valid 3-digit CVV" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Purchase Button -->
+        <button type="submit" class="w-full bg-brandGold text-brandBlack font-semibold py-2 rounded-full hover:bg-yellow-500 transition-colors">Purchase</button>
+        
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="hidden flex justify-center">
+          <div class="loader"></div>
+        </div>
+        
+        <!-- OTP Verification -->
+        <div id="otpSection" class="hidden">
+          <label for="otpInput" class="block text-gray-700 font-semibold">Enter OTP</label>
+          <input type="text" id="otpInput" name="otpInput" pattern="\d{6}" title="Enter the 6-digit OTP" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brandGold">
+          <button type="button" onclick="verifyOTP()" class="mt-4 w-full bg-brandGold text-brandBlack font-semibold py-2 rounded-full hover:bg-yellow-500 transition-colors">Continue</button>
+        </div>
+        
+        <!-- Success Message -->
+        <p id="purchaseSuccess" class="mt-4 text-green-500 text-center hidden">Thank you for your purchase! Your order has been placed successfully.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-8 right-8 bg-brandGold text-brandBlack p-3 rounded-full shadow-lg hidden hover:bg-yellow-500 transition-colors" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-600">&copy; 2025 Prizma. Designed by Prizma Team <i class="fas fa-heart text-red-500"></i></p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <i class="fab fa-cc-visa fa-2x text-gray-700"></i>
+        <i class="fab fa-cc-mastercard fa-2x text-gray-700"></i>
+        <i class="fab fa-cc-paypal fa-2x text-gray-700"></i>
+        <i class="fab fa-cc-amex fa-2x text-gray-700"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Swiper.js JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <!-- Custom Scripts -->
+  <script src="scripts.js"></script>
+  
+</body>
+</html>
